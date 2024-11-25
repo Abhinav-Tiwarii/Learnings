@@ -1,0 +1,19 @@
+Stored-Procedure
+We need to create a stored proc if we want to use the DDL statements like update,create, insert statements all together.
+In Snowflake, We can create sp using different languages like java, python, scala, mysql, postgres.
+When we have to execute our sql statements in loop, then also we can make use of stored proc.
+
+--Syntax
+Create <or replace> procedure <proc_name>(parameters)
+Returns <datatype>
+Language <sql, python, java, scala, etc..>
+Execute as <caller, owner, etc...>
+$$
+....
+....(block of sql statements)
+....
+$$;
+
+--Calling sp:
+call proc_name(parameters);
+
