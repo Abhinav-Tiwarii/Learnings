@@ -17,3 +17,37 @@ $$;
 --Calling sp:
 call proc_name(parameters);
 
+----------------------------------------------------------------------------------
+--Blocks in sp
+Create Block
+Declare Block
+Body Block
+Exceptions Block
+
+
+Create procedure procedure_name(parameters)
+language <python, scala, sql>
+execute as <caller, owner>
+return <datatype, col_name, table_name>
+comment <add for your reference>
+
+
+
+--Declare
+col1 varchar;
+col1 string;
+dob date;
+cur1 cursor for sql statement;
+res1 resultset;
+
+--Body
+Begin
+sql-statements,
+arithmetic statements,
+looping statements
+End;
+
+--Exceptions
+Exception 
+when statement error then Action;
+End;
