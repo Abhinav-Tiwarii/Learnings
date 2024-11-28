@@ -1,0 +1,19 @@
+--write a stored proc to find the square root of any number
+
+CREATE OR REPLACE PROCEDURE EMP.PROCS.FIND_SQRT("A_NUMBER" integer)
+returns float
+language sql
+comment = 'this is a program to find the sqrt of a number'
+execute as caller
+as 
+
+declare 
+sqrt_number float;
+
+begin
+sqrt_number := sqrt(a_number);
+return sqrt_number;
+end;
+
+
+call FIND_SQRT(900);
