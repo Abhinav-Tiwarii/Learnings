@@ -1,0 +1,13 @@
+--Sample_Proc Creation
+
+create or replace procedure proc_name ("N" varchar)
+returns varchar
+execute as caller
+language sql
+as
+
+begin
+return 'My name is:' ||N;
+end;
+
+call proc proc_name('Abhinav');
